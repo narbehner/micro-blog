@@ -1,0 +1,163 @@
+/* ._____ is the class selector */
+
+/*
+html{
+    font-family: __;
+}
+*/
+
+/* * universal selector, applies it to everything*/
+/* before and after apply to everything BEFORE or AFTER
+    ie, apply box-sizing before and after every element in the page?
+    
+    using only one or the other works in this case, probably a precautionary practice*/
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    box-sizing: border-box; /* resolves padding overflow issues to allign things*/
+}
+
+.navbar{
+    max-width: 640px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row; /*row is default */
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+.navbar__brand{
+    display: flex;
+    align-items: center;
+}
+
+.navbar__logo{
+    margin-right: 30px;
+}
+
+.navbar__navigation{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    color: #5c6b70;
+}
+
+.navbar__navigation-item{
+    margin-left: 50px;
+}
+
+.navbar__navigation-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.main{
+    max-width: 400px;
+    margin:0 auto;
+    padding: 0 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form__input{
+    width: 100%;
+}
+
+.form__label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form__textarea{
+    width: inherit; /* sets width same as container ie 100% */
+    font-size: 18px;
+    padding:10px 10px;
+    border: none;
+    background-color:seashell ;
+    margin-bottom: 10px;
+    resize:none;
+}
+
+.form__submit{
+    background-color: #3cd0ff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px; /*round edges*/
+    color: white;
+}
+
+.form__submit:hover{
+    background-color: #18c1e1;
+    cursor:pointer;
+}
+
+.entry{
+    margin-top: 50px;
+}
+
+.entry__title{
+    display: inline;
+    font-size: 18px;
+}
+
+.entry__date{
+    color:#5c6b70;
+}
+
+.entry__content{
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.footer{
+    background-color:rgb(83, 86, 102);
+    color:white;
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 4px solid black;
+    font-size: 12px;
+}
+
+.footer__item{
+    color:inherit;
+    text-decoration: none;
+    margin-bottom:5px;
+}
+
+.footer__item:hover{
+    text-decoration: underline;
+}
+
+.footer__content{
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.footer .left{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .right{
+    flex-grow: 1;
+    display: flex;
+}
+
+.footer__column{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
